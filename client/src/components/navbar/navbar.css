@@ -1,0 +1,47 @@
+.nav-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
+  min-height: 8.7rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  color: #e0e0e0;
+}
+
+.nav-div {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.25rem;
+}
+
+.nav-link {
+  margin: 0.25rem;
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+.nav-link:visited {
+  color: #e0e0e0;
+}
+
+#envelope-icon {
+  min-height: 18px;
+}
+
+.logo {
+  width: 135px;
+  height: 90px;
+}
+
+.nav-cart-div i:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
