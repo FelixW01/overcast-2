@@ -1,4 +1,4 @@
-# Overcast
+# Overcast 2.0
 
 ## Live Website 
 https://felixw01.github.io/overcast/
