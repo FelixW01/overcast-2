@@ -1,0 +1,132 @@
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/cover-1-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.hero-image a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+}
+
+.hero-content:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.down-div {
+  position: fixed;
+  bottom: 1rem;
+  font-size: 2rem;
+  color: rgb(224, 224, 224);
+  z-index: 5;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#hero-fall {
+  background-image: url("/images/cover-2-mobile.jpg");
+}
+#hero-winter {
+  background-image: url("/images/cover-3-mobile.jpg");
+}
+
+@media (min-width: 600px) {
+  #hero-fall {
+    background-image: url("/images/cover-2-tablet.jpg");
+  }
+  .hero-image a {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-image {
+    background-image: url("/images/cover-1.jpg");
+  }
+  #hero-fall {
+    background-image: url("/images/cover-2.jpg");
+  }
+  #hero-winter {
+    background-image: url("/images/cover-3.jpg");
+  }
+  .hero-content {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  .hero-image a {
+    max-width: 50%;
+  }
+  .logo {
+    width: 150px;
+    height: 115px;
+  }
+  .nav-cart-div {
+    margin-right: 1rem;
+  }
+  .nav-link i {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-image a {
+    max-width: 40%;
+  }
+  .nav-div {
+    margin: 0 1.75rem;
+  }
+  .logo {
+    width: 175px;
+    height: 135px;
+  }
+  #envelope-icon {
+    margin-right: 1rem;
+  }
+  .hero-content {
+    font-size: 1.25rem;
+    padding: 2.5rem;
+  }
+  .nav-link {
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+}
