@@ -4,6 +4,7 @@ import HomePage from './pages/homepage'
 import CollectionPage from './pages/collectionpage'
 import Error from './pages/error'
 import Navbar from './components/navbar/navbar'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/collection" element={<CollectionPage />}/>
         <Route parh="*" element={<Error />}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }

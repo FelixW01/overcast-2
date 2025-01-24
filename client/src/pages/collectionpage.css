@@ -1,0 +1,44 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
+  min-height: 7rem;
+  background: #333333;
+  width: 100%;
+  color: #e0e0e0;
+}
+
+.nav-div {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.nav-cart-div a {
+  margin: 0.5rem;
+  color: #e0e0e0;
+}
+
+.nav-cart-div i {
+  color: #e0e0e0;
+}
+
+.nav-cart-div i:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+#envelope-icon {
+  min-height: 18px;
+}
+
+.logo {
+  width: 135px;
+  height: 7rem;
+}
+    
