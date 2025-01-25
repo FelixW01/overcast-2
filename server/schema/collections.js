@@ -13,7 +13,7 @@ const collections = async () => {
         console.log('Collections table present');
     } catch (err) {
         console.error('Could not create collections table: ', err);
-    }
+    } 
 }
 
 module.exports = { collections };

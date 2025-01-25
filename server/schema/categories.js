@@ -14,5 +14,5 @@ const categories = async () => {
         console.error('Could not create categories table: ', err);
     }
 }
-
+    
 module.exports = { categories };

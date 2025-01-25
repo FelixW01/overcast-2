@@ -8,10 +8,10 @@ const products = async () => {
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10,2),
-    image_src VARCHAR(255),
-    image_alt VARCHAR(255),
-    product_link VARCHAR(500),
-    tag VARCHAR(255),
+    src VARCHAR(255),
+    alt VARCHAR(255),
+    link VARCHAR(500), 
+    gender ENUM('m', 'f') NOT NULL,
     FOREIGN KEY (collection_id) REFERENCES collections(id),
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );`;
