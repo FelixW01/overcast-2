@@ -1,0 +1,14 @@
+/* #product-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+#product-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+  max-width: 80%;
+  flex-wrap: wrap;
+}
