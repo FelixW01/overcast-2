@@ -1,15 +1,17 @@
 const pool = require('../db/config.js');
 
+
 const getProducts = async (req, res) => {
-    const { collection } = req.body;
+    const { collectionId } = req.query;
+    console.log(collectionId, '<<backend collectionid')
     try {
         const query = `SELECT *
             FROM products
-            INNER JOIN collections
-            ON products.collection_id = ?
+            INNER JOIN collections ON products.collection_id = collections.id
+            WHERE products.collection_id = ?
             ;`
         
-        const  [results] = await pool.query(query, [collection]);
+        const  [results] = await pool.query(query, [collectionId]);
 
         if (results.length === 0) {
             return res.status(404).json({ message: 'No products found' });
