@@ -54,3 +54,10 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.select-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}

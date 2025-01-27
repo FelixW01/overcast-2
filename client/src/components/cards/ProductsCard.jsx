@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 import './productsCard.css'
 
 function ProductsCard({products}) {
-  console.log(products, '<<< cards products')
+  // console.log(products, '<<< cards products')
   
   const handleLinkClick = (link) => {
     window.open(link, '_blank');
@@ -19,10 +19,11 @@ function ProductsCard({products}) {
   return (
     <div id="product-div">
       {products !== undefined ? 
-      products.map((product, index) => {
+      products.map((product) => {
         return(
       <Card style={{ width: 300, }}
         key={product.id}
+        className="product-card"
         cover={
       <img
         alt={`${product.alt}`}

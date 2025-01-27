@@ -3,12 +3,12 @@ const pool = require('../db/config.js');
 
 const getProducts = async (req, res) => {
     const { collectionId } = req.query;
-    console.log(collectionId, '<<backend collectionid')
+
     try {
-        const query = `SELECT products.id, products.name, products.description, products.price, products.src, products.alt, products.link
+        const query = `SELECT products.id, products.name, products.description, products.price, products.src, products.alt, products.link, products.category_id
             FROM products
             INNER JOIN collections ON products.collection_id = collections.id
-            WHERE products.collection_id = 1
+            WHERE products.collection_id = ?
             ;`
         
         const  [results] = await pool.query(query, [collectionId]);
