@@ -115,7 +115,7 @@ const CATEGORY_MAP = {
             <h1 id="collection-title">{collection}</h1>
             
             <div className="main-div">
-              <div className="card-div-container" id="product-div">
+              <div className="card-div-container" id="product-container">
               <div className="select-div">
                 <Select
                     id="tag-select"
@@ -124,8 +124,7 @@ const CATEGORY_MAP = {
                     value={selectedItems}
                     onChange={setSelectedItems}
                     style={{
-                        width: '20%',
-                        minWidth: '240px',
+                        minWidth: '160px',
                     }}
                     options={dynamicTags.map((item) => ({
                         value: item,

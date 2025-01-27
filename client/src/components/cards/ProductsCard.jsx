@@ -20,7 +20,7 @@ function ProductsCard({products}) {
       {products !== undefined ? 
       products.map((product) => {
         return(
-      <Card style={{ width: 300, }}
+      <Card
         key={product.id}
         className="product-card"
         cover={

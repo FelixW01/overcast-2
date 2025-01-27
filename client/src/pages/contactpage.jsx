@@ -16,9 +16,9 @@ const onFinishFailed = (errorInfo) => {
 return (
 <section id="form-section">
 <Card title="Contact Us" id="form-card">
- <Form name="basic" labelCol={{ span: 8,}}
+ <Form name="basic" labelCol={{ span: 6,}}
     wrapperCol={{ span: 16, }}
-    style={{ maxWidth: 600,}}
+    style={{ maxWidth: 500,}}
     initialValues={{ remember: true, }}
     onFinish={onFinish}
     onFinishFailed={onFinishFailed}
@@ -79,11 +79,15 @@ return (
         </Select>
     </Form.Item>
 
-    <Form.Item label={null}>
-      <Button type="primary" htmlType="submit">
+    <Form.Item
+      wrapperCol={{ span: 24 }}
+      style={{ textAlign: 'center' }}
+    >
+        <Button type="primary" htmlType="submit" id="submit-btn">
         Submit
       </Button>
     </Form.Item>
+
    </Form>
    </Card>
   </section>
