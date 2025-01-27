@@ -2,7 +2,7 @@
 
 ## Live Website 
 
-https://overcast-98c306aa4a6c.herokuapp.com/collection
+https://overcast-98c306aa4a6c.herokuapp.com/
 
 ## Description
 Welcome to  Overcacast, your one stop shop for your seasonal clothing needs. Overcast focuses on delivering fashion solutions towards those who appreciates the cozy things in life.
