@@ -4,10 +4,14 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 #form-card {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   width: clamp(323px, 50vw, 500px);
+  margin: 3rem 0;
+}
+
+#submit-btn {
+  width: 100%;
 }
