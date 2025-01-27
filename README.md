@@ -1,9 +1,8 @@
 # Overcast 2.0
 
 ## Live Website 
-https://felixw01.github.io/overcast/
 
-https://main.dl6emuh44uay.amplifyapp.com/index.html
+https://overcast-98c306aa4a6c.herokuapp.com/collection
 
 ## Description
 Welcome to  Overcacast, your one stop shop for your seasonal clothing needs. Overcast focuses on delivering fashion solutions towards those who appreciates the cozy things in life.
