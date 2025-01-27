@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/FelixW01/Vital-view#readme",
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.0.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "vite": "^6.0.11"
+    "vite": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
