@@ -4,7 +4,7 @@ import HomePage from './pages/homepage'
 import CollectionPage from './pages/collectionpage'
 import ContactPage from './pages/contactpage'
 import Error from './pages/error'
-import Navbar from './components/navbar/navbar'
+import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import { Toaster } from 'react-hot-toast';
 
