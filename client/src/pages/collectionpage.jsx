@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import axios from 'axios';
-import { Select } from 'antd';
+import { Select, Skeleton, Avatar, Card } from 'antd';
 import ProductsCard from '../components/cards/ProductsCard'
 import './collectionpage.css'
+const { Meta } = Card;
 
 function CollectionPage() {
 const [collection, setCollection] = useState('')
@@ -12,7 +13,6 @@ const [allProducts, setAllProducts] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
 const [selectedItems, setSelectedItems] = useState([]);
 const [dynamicTags, setDynamicTags] = useState([]);
-// const OPTIONS = ['T-shirt', 'Shorts', 'Jackets & Sweaters', 'Coats', 'Pants'];
 const CATEGORY_MAP = {
     1: 'T-shirt',
     2: 'Shorts',
@@ -20,39 +20,42 @@ const CATEGORY_MAP = {
     4: 'Coats',
     5: 'Pants',
 };
-// const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
+
     
-    // Gets collection from localstorage, put it in state
+    // 1. Gets collection from localstorage, put it in state
     useEffect(() => {
         const storedCollection = localStorage.getItem('collection')
         setCollection(storedCollection)
     }, []) 
 
-    // Sets collection Id based on collection state
+    // 2. Sets collection Id based on collection state
     useEffect(() => {
         if(collection !== '') {
             collection === 'summer' ? setCollectionId(1) : collection === 'fall' ? setCollectionId(2) : setCollectionId(3);
         }
     }, [collection])
 
-    // Calls getProducts, pass in collection Id and set loading to false signifying product is ready
+    // 3. Calls getProducts, pass in collection Id and set loading to false signifying product is ready
     useEffect(() => {
         if (collectionId !== undefined) {
             getProducts(collectionId);
         }
     }, [collectionId])
 
-    // Update filter options dynamically based on available products
+    // 4. Update filter options dynamically based on available products
     useEffect(() => {
         if (allProducts.length > 0) {
             console.log(allProducts, '<<< allProducts');
-            // Set object is built into JS, only stores unique values
+            // Set object is built into JS, only stores unique values, Set object will consist of unique tags from the available products array
+            // Spread the set object in the array
+            // This is done because there will be 3 different collections and 6 different tags, For every collection the products will be different as well
             const uniqueTags = [...new Set(allProducts.map((product) => CATEGORY_MAP[product.category_id]))];
             console.log(uniqueTags, '<<< unique tags')
             setDynamicTags(uniqueTags);
         }
     }, [allProducts]);
 
+    // 5. Filters products based on user input from select
     useEffect(() => {
         if (selectedItems.length === 0) {
             setProducts(allProducts);
@@ -88,17 +91,41 @@ const CATEGORY_MAP = {
 
     return (
         <>
-        { isLoading ? <h1>loading...</h1> : <main id="collection-container">
+        { isLoading ? 
+        <div className="skeleton-container">
+         <div className="loading-div">
+            <Skeleton loading={isLoading} avatar active>
+                  <Meta
+                    avatar={<Avatar className="custom-avatar" src="https://api.dicebear.com/7.x/miniavs/svg?seed=2" />}
+                    title="Card title"
+                    description="This is the description"
+                  />
+            </Skeleton> 
+            <Skeleton loading={isLoading} avatar active>
+                  <Meta
+                    avatar={<Avatar className="custom-avatar" src="https://api.dicebear.com/7.x/miniavs/svg?seed=2" />}
+                    title="Card title"
+                    description="This is the description"
+                  />
+            </Skeleton>
+         </div>
+        </div> 
+    : <main id="collection-container">
         <section id="product-section">
-            <h1 id="collection-title"></h1>
-            <div className="select-div">
+            <h1 id="collection-title">{collection}</h1>
+            
+            <div className="main-div">
+              <div className="card-div-container" id="product-div">
+              <div className="select-div">
                 <Select
+                    id="tag-select"
                     mode="multiple"
                     placeholder="Filter by"
                     value={selectedItems}
                     onChange={setSelectedItems}
                     style={{
-                        width: '50%',
+                        width: '20%',
+                        minWidth: '240px',
                     }}
                     options={dynamicTags.map((item) => ({
                         value: item,
@@ -106,8 +133,6 @@ const CATEGORY_MAP = {
                     }))}
                 />
             </div>
-            <div className="main-div">
-              <div className="card-div-container" id="product-div">
               <ProductsCard products={products} />
               </div>
             </div>

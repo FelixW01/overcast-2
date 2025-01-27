@@ -61,3 +61,18 @@
   width: 100%;
   justify-content: flex-start;
 }
+.loading-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 20px;
+  width: 80%;
+}
+
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

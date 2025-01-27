@@ -6,7 +6,6 @@ import { toast } from 'react-hot-toast';
 import './productsCard.css'
 
 function ProductsCard({products}) {
-  // console.log(products, '<<< cards products')
   
   const handleLinkClick = (link) => {
     window.open(link, '_blank');
