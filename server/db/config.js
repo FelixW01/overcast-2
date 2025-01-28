@@ -30,7 +30,7 @@ if (jawsdbUrl) {
     // .promise() here enables async await when dealing with the pool
 }
 
-// ✅ Check Database Connection
+// Check Database Connection
 async function checkDBConnection() {
     try {
         const [rows] = await pool.query('SELECT 1');

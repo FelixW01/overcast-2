@@ -5,6 +5,11 @@ const getProducts = async (req, res) => {
     const { collectionId } = req.query;
 
     try {
+
+    if (!collectionId) {
+        return res.status(400).json({ message: 'Collection ID is required' });
+    }
+    
         const query = `SELECT products.id, products.name, products.description, products.price, products.src, products.alt, products.link, products.category_id
             FROM products
             INNER JOIN collections ON products.collection_id = collections.id
