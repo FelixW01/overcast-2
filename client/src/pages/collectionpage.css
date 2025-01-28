@@ -49,6 +49,11 @@
   align-items: center;
 }
 
+#collection-title {
+  font-size: 2.25rem;
+  padding: 2rem;
+}
+
 .main-div {
   display: flex;
   flex-direction: row;

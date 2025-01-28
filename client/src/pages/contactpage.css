@@ -15,3 +15,9 @@
 #submit-btn {
   width: 100%;
 }
+
+@media (min-width: 768px) {
+  #submit-btn {
+    width: 85%;
+  }
+}

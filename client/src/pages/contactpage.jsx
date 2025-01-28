@@ -1,17 +1,21 @@
 import './contactpage.css'
 import { Button, Form, Input, Select, Card } from 'antd';
-
-
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 
 function ContactPage() {
+const [userInput, setUserInput] = useState()
 
 const onFinish = (values) => {
-  console.log('Success:', values);
+  console.log('Success:', values)
+  toast.success('Thank you for contacting us!')
 };
 
 const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
+  toast.error('Something went wrong. Please try again!')
 };
+
 
 return (
 <section id="form-section">
@@ -54,11 +58,16 @@ return (
     <Form.Item
       label="Email"
       name="email"
+      onChange={(e) => setUserInput(e.target.value)}
       rules={[
         {
           required: true,
           message: 'Please input your email!',
         },
+        {
+          pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+          message: `Invalid Email: ${userInput} `,
+        }
       ]}
     >
       <Input />
