@@ -129,7 +129,10 @@ const CATEGORY_MAP = {
         </div> 
     : <main id="collection-container">
         <section id="product-section">
+        <div className={`${collection}-banner top-banner`}>
             <h1 id="collection-title">{collection.charAt(0).toUpperCase() + collection.slice(1)}</h1>
+        </div>
+            
             
             <div className="main-div">
               <div className="card-div-container" id="product-container">

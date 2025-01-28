@@ -51,7 +51,6 @@ function Collection({collections}) {
         components: {
           Carousel: {
             arrowSize: 40,
-            dotPosition: 'bottom',
           },
         },
       }}
@@ -59,7 +58,7 @@ function Collection({collections}) {
     <main className="main-container">
     {/* Summer Collection */}
       <section className="main-section">
-      <Carousel beforeChange={handleCarouselChange} autoplay={true} autoplaySpeed={8000} infinite={true}>
+      <Carousel beforeChange={handleCarouselChange} autoplay={true} autoplaySpeed={8000} infinite={true} dotPosition='bottom'>
        {/* Slide 1 */}
       <div className="content-style">
          <div className="hero-image" id={`hero-${collections[0].collection + activeIndex}`}> 
