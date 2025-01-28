@@ -13,6 +13,7 @@ const [allProducts, setAllProducts] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
 const [selectedItems, setSelectedItems] = useState([]);
 const [dynamicTags, setDynamicTags] = useState([]);
+const [sortOrder, setSortOrder] = useState(null);
 const CATEGORY_MAP = {
     1: 'T-shirt',
     2: 'Shorts',
@@ -60,12 +61,28 @@ const CATEGORY_MAP = {
         if (selectedItems.length === 0) {
             setProducts(allProducts);
         } else {
+            // product.category_id returns a number which mimics the CATEGORY_MAP
             const filteredProducts = allProducts.filter((product) =>
                 selectedItems.includes(CATEGORY_MAP[product.category_id])
             );
             setProducts(filteredProducts);
         }
     }, [selectedItems, allProducts]);
+
+
+    // Filters products by price, asc/desc/all
+    useEffect(() => {
+    // Resets products with allProducts which is a copy of the original data from the db
+    if (sortOrder === 'all' || !sortOrder) {
+        setProducts(allProducts);
+    } else {
+        // Sort desc/assc depending on sortOrder state
+        const sortedProducts = [...products].sort((a, b) => 
+            sortOrder === 'asc' ? a.price - b.price : b.price - a.price
+        );
+        setProducts(sortedProducts);
+    }
+    }, [sortOrder]);
 
     // Call to the backend for products based on collections, 1 for summer, 2 for fall and 3 for winter
     async function getProducts(collectionId) {
@@ -120,17 +137,33 @@ const CATEGORY_MAP = {
                 <Select
                     id="tag-select"
                     mode="multiple"
-                    placeholder="Filter by"
+                    placeholder="Category"
                     value={selectedItems}
                     onChange={setSelectedItems}
                     style={{
                         minWidth: '160px',
+                        marginRight: '.25rem'
                     }}
                     options={dynamicTags.map((item) => ({
                         value: item,
                         label: item,
                     }))}
                 />
+
+                <Select
+                        id="sort-select"
+                        placeholder="Price"
+                        value={sortOrder}
+                        onChange={setSortOrder}
+                        style={{
+                            minWidth: '160px',
+                        }}
+                        options={[
+                            { value: 'all', label: 'All' },
+                            { value: 'asc', label: 'Price: Low to High' },
+                            { value: 'desc', label: 'Price: High to Low' }
+                        ]}
+                    />
             </div>
               <ProductsCard products={products} />
               </div>
