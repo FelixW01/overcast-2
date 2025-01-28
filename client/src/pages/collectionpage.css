@@ -127,3 +127,7 @@
     border-radius: 12px;
   }
 }
+
+.ant-select {
+  width: 150px !important;
+}

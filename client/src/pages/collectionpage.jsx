@@ -144,7 +144,7 @@ const CATEGORY_MAP = {
                     value={selectedItems}
                     onChange={setSelectedItems}
                     style={{
-                        minWidth: '160px',
+                        minWidth: '80px',
                         marginRight: '.25rem'
                     }}
                     options={dynamicTags.map((item) => ({
