@@ -53,6 +53,20 @@ a:visited {
   animation: animate 1s linear infinite;
 }
 
+.content-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-summer2 {
+  background-image: url("/images/summer-2-mobile.jpg");
+}
+#hero-summer3 {
+  background-image: url("/images/summer-3-mobile.jpg");
+}
+
 @keyframes animate {
   100% {
     transform: translateY(-5px);
@@ -82,6 +96,12 @@ a:visited {
 @media (min-width: 960px) {
   .hero-image {
     background-image: url("/images/cover-1.jpg");
+  }
+  #hero-summer2 {
+    background-image: url("/images/summer-2.jpg");
+  }
+  #hero-summer3 {
+    background-image: url("/images/summer-3.jpg");
   }
   #hero-fall {
     background-image: url("/images/cover-2.jpg");

@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import Collection from '../components/collection/Collection'
 import '../App.css'
 
