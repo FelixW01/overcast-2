@@ -1,12 +1,18 @@
-# Overcast 2.0
+# Overcast ☁️ | For Those Who Appreciate Life’s Cozier Moments
 
 ## Live Website 
 
 https://overcast-98c306aa4a6c.herokuapp.com/
 
 ## Description
-Welcome to  Overcacast, your one stop shop for your seasonal clothing needs. Overcast focuses on delivering fashion solutions towards those who appreciates the cozy things in life.
-This website was created for the purpose of honing Javascript, HTML and CSS skills especially the practice of fetching an API and dynamically rendering said data into the DOM.
+Welcome to Overcast, your one-stop shop for stylish seasonal clothing. Overcast is designed for those who appreciate the cozy things in life, offering a seamless shopping experience with fashion solutions tailored to every season.
+
+## About the Project
+This application is built using the MERN stack (MySQL, Express.js, React, Node.js) to provide a dynamic and responsive e-commerce platform. Overcast was developed as a hands-on project to refine skills in JavaScript, HTML, and CSS, with a particular focus on:
+
+Dynamically rendering data into the DOM
+Building a full-stack web application
+This project serves as both a learning experience and a demonstration of best practices in modern web development.
 
 ## Table of Contents
 - [App Demo](#app-demo)
@@ -15,8 +21,8 @@ This website was created for the purpose of honing Javascript, HTML and CSS skil
 - [Questions](#questions)
 
 ## App Demo
-<img src="https://github.com/user-attachments/assets/5ce725c0-2130-466f-8764-9855141c105c" width="400" />
-<img src="https://github.com/user-attachments/assets/99b5ec31-bcc9-4eed-8dc2-4a843b19ccee" width="400" />
+### Click for video demo
+[![thumb-overcast](https://github.com/user-attachments/assets/eccf4b00-56ea-4f6b-a12f-f6f8bdfb6bfc)](https://youtu.be/kMV4FxscnB4?si=cAeukeA1jWyR_gys)
 
 
 
@@ -25,15 +31,33 @@ To run locally, follow these steps:
 
 1. Clone the repository using the following command:
     ```bash
-    git clone https://github.com/FelixW01/power-project.git
+    git clone https://github.com/FelixW01/overcast-2.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd overcast
+    cd overcast-2
+    ```
+3. Install Root dependencies:
+    ```bash
+    npm install
+    ```
+4. Navigate to the desired app directory:
+    ```bash
+    cd client
+    cd ..
+    cd server
     ```
     
-3. To run the application, open via live server in your web browser.
+5. Install Server/Client dependencies:
+    ```bash
+    npm install
+    ```
+
+5. Run application:
+    ```bash
+    npm run dev
+    ```
 
 
 ## Contributing
