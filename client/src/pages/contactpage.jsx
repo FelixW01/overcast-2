@@ -19,6 +19,7 @@ const onFinishFailed = (errorInfo) => {
 
 return (
 <section id="form-section">
+<div className="contact-container">
 <Card title="Contact Us" id="form-card">
  <Form name="basic" labelCol={{ span: 6,}}
     wrapperCol={{ span: 16, }}
@@ -99,6 +100,9 @@ return (
 
    </Form>
    </Card>
+   <div className="contact-image">
+    </div>
+  </div>
   </section>
   )
 }
