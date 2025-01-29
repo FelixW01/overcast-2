@@ -144,7 +144,7 @@ const CATEGORY_MAP = {
                     value={selectedItems}
                     onChange={setSelectedItems}
                     style={{
-                        minWidth: '100px',
+                        minWidth: '126px',
                         marginRight: '.25rem'
                     }}
                     options={dynamicTags.map((item) => ({
@@ -159,7 +159,7 @@ const CATEGORY_MAP = {
                         value={sortOrder}
                         onChange={setSortOrder}
                         style={{
-                            minWidth: '100px',
+                            minWidth: '126px',
                         }}
                         options={[
                             { value: 'all', label: 'All' },

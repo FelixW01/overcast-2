@@ -25,6 +25,7 @@ function ProductsCard({products}) {
         className="product-card"
         cover={
       <img
+        className="card-img"
         alt={`${product.alt}`}
         src={`${product.src}`}
       />

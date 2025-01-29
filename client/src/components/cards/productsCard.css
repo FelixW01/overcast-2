@@ -20,14 +20,19 @@
   justify-content: space-between;
 }
 
+/* .card-img {
+  max-width: 500px;
+} */
+
 .ant-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 256px;
+  max-width: 400px;
 }
 
 .ant-tag {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
-
