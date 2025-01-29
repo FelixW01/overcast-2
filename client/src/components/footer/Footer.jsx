@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 function Footer() {
 const location = useLocation(); 
 const isHomePage = location.pathname === '/';
-
+const isProductPage = location.pathname.includes('/collection');
 
   return (
     <>
@@ -14,7 +14,7 @@ const isHomePage = location.pathname === '/';
       <div className="container">
         <div className="footer-div">
           <div className="desc-div">
-            <div className="arrow-container"><a href="#product-section"><i className="fa-solid fa-angle-up up-arrow"></i></a></div>
+            <div className="arrow-container"><a href={isProductPage ? "#product-section" : "#navbar"}><i className="fa-solid fa-angle-up up-arrow"></i></a></div>
             <h5 className="white-text">Overcast</h5>
             <p>
               For those who appreciates the cozy things in life

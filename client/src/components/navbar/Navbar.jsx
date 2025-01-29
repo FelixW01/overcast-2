@@ -7,7 +7,7 @@ const location = useLocation();
 const isHomePage = location.pathname === '/';
 
   return (
-    <nav className={isHomePage ? "nav-container" : "nav-container-2"}>
+    <nav className={isHomePage ? "nav-container" : "nav-container-2"} id="navbar">
       <div className="nav-div">
     <Link to="/" className={ isHomePage ? "logo" : "logo-2"}><img src="images/logo-1.png" className="logo" alt="overcast logo icon"/></Link>
         <div className="nav-cart-div">

@@ -70,10 +70,10 @@
   .contact-image {
     flex: 1;
     width: 500px;
-    height: 500px; 
+    height: 500px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    background-image: url("images/cover-1.jpg");
-    background-color: #f5f5f5; 
+    background-image: url("/images/cover-1.jpg");
+    background-color: #f5f5f5;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
