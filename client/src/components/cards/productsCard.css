@@ -20,10 +20,6 @@
   justify-content: space-between;
 }
 
-/* .card-img {
-  max-width: 500px;
-} */
-
 .ant-card {
   display: flex;
   flex-direction: column;
