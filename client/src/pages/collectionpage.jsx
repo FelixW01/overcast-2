@@ -36,7 +36,7 @@ const CATEGORY_MAP = {
         }
     }, [collection])
 
-    // 3. Calls getProducts, pass in collection Id and set loading to false signifying product is ready
+    // 3. Calls getProducts, pass in collection Id as params
     useEffect(() => {
         if (collectionId !== undefined) {
             getProducts(collectionId);
@@ -49,6 +49,7 @@ const CATEGORY_MAP = {
             // Set object is built into JS, only stores unique values, Set object will consist of unique tags from the available products array
             // Spread the set object in the array
             // This is done because there will be 3 different collections and 6 different tags, For every collection the products will be different as well
+            // Example: [{category_id: 1}, {category_id: 2}, {category_id: 1}] → ['T-shirt', 'Shorts'] since Set only takes unique values
             const uniqueTags = [...new Set(allProducts.map((product) => CATEGORY_MAP[product.category_id]))];
             setDynamicTags(uniqueTags);
         }
