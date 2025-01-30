@@ -40,3 +40,9 @@ body {
   scroll-snap-align: start;
   height: 100vh;
 }
+
+@media (max-width: 350px) {
+  body, html {
+    overflow-x: hidden;
+  }
+}

@@ -46,12 +46,10 @@ const CATEGORY_MAP = {
     // 4. Update filter options dynamically based on available products
     useEffect(() => {
         if (allProducts.length > 0) {
-            console.log(allProducts, '<<< allProducts');
             // Set object is built into JS, only stores unique values, Set object will consist of unique tags from the available products array
             // Spread the set object in the array
             // This is done because there will be 3 different collections and 6 different tags, For every collection the products will be different as well
             const uniqueTags = [...new Set(allProducts.map((product) => CATEGORY_MAP[product.category_id]))];
-            console.log(uniqueTags, '<<< unique tags')
             setDynamicTags(uniqueTags);
         }
     }, [allProducts]);
