@@ -7,7 +7,7 @@ https://overcast-98c306aa4a6c.herokuapp.com/
 ## Description
 Welcome to Overcast, your one-stop shop e-commerce platform for stylish seasonal clothing. Overcast is designed for those who appreciate the cozy things in life, offering a seamless shopping experience with fashion solutions tailored to every season.
 
-## Technologies Used
+## Technology Overview
 This application is built using the MERN stack (MySQL, Express.js, React, Node.js) to provide a dynamic and responsive e-commerce platform. Overcast was developed as a hands-on project to refine skills in JavaScript, HTML, and CSS, with a particular focus on:
 
 Dynamically rendering data into the DOM
