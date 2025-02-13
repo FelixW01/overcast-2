@@ -10,8 +10,9 @@ Welcome to Overcast, your one-stop shop e-commerce platform for stylish seasonal
 ## Technology Overview
 This application is built using the MERN stack (MySQL, Express.js, React, Node.js) to provide a dynamic and responsive e-commerce platform. Overcast was developed as a hands-on project to refine skills in JavaScript, HTML, and CSS, with a particular focus on:
 
-Dynamically rendering data into the DOM
-Building a full-stack web application
+- Dynamically rendering data into the DOM
+- Building a full-stack web application
+
 This project serves as both a learning experience and a demonstration of best practices in modern web development.
 
 ## Table of Contents
