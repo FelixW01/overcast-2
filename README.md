@@ -55,7 +55,7 @@ To run locally, follow these steps:
     npm install
     ```
 
-5. Run application:
+6. Run application:
     ```bash
     npm run dev
     ```
